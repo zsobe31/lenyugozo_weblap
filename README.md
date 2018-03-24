@@ -1,0 +1,2 @@
+# lenyugozo_weblap
+gyakorlas
