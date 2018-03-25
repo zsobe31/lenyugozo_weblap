@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Webdesigned</title>
 <head>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Work+Sans:300&subset=latin-ext');
@@ -11,6 +13,8 @@
       margin: 0;
       height: 100%;
       color: white;
+      font-family: 'Work Sans', sans-serif;
+      overflow: hidden;
     }
 
     .hatter {
@@ -45,16 +49,74 @@
     .cim {
       font-family: 'Work Sans';
       font-size: 50px;
+      text-align: center;
     }
+    .maxmeret {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+    .lablec {
+      bottom: 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;    
+    }
+    .gomb {
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      width: 120px;
+      display: inline-block;
+      border-radius: 5px;
+    }
+    .gomb:hover {
+      filter: invert(100%);
+      transition-duration: 0.5s;
+    }
+    
+    @media (max-width: 767px) {
+      .maxmeret {
+        display: none;
+      }
+    }
+    @media (max-height: 450px) {
+      .fejlec, .lablec {
+        display: none;
+      }
+    }
+    
   </style>
-  <title>Ez a cím</title>
 </head>
 
 <body class="hatter">
 
-
-  <div class="tokkozepre cim">Lenyűgöző weblap!</div>
-
+  <video autoplay loop muted poster="hatter.jpg" class="tokkozepre maxmeret">
+    <source src="hatter2.mp4" type="video/mp4">
+  </video>
+  
+  <div class="fejlec vizkozepre">Fejléc</div>
+  
+  <div class="tokkozepre cim">Webdesigned
+    <div class="gombdoboz">
+      <a href="http://index.hu" class="gomb">Index weblap</a>
+      <a href="http://origo.hu" class="gomb">Origo weblap</a>
+      <a href="http://bama.hu" class="gomb">Bama weblap</a>
+    </div>
+  </div>
+  
+  <div class="lablec vizkozepre">
+    &copy; <span id="year"></span> by Zsolt
+  </div>
+<script>
+  
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById('year').innerHTML = n;
+  
+  </script>
 
 </body>
 
